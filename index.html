@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bee Line Sewer Cleaning | Des Moines, IA</title>
+    <style>
+        /* Modern Elegant Theme Variables */
+        :root {
+            --bg-color: #FAFAFA;
+            --text-main: #1A1A1A;
+            --text-muted: #7A7A7A;
+            --accent-gold: #C5A059;
+            --accent-gold-hover: #A38448;
+            --dark-surface: #111111;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        p {
+            font-weight: 300;
+            letter-spacing: 0.3px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Agency Top Bar */
+        .agency-bar {
+            background-color: var(--dark-surface);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            text-align: center;
+            padding: 12px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .agency-bar a {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .agency-bar a:hover {
+            color: var(--white);
+        }
+
+        /* Header Nav - Centered */
+        header {
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            top: 45px;
+            z-index: 10;
+        }
+
+        .nav-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .logo {
+            color: var(--white);
+            font-size: 2.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .contact-btn {
+            background-color: var(--accent-gold);
+            color: var(--white);
+            padding: 14px 36px;
+            text-decoration: none;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--accent-gold-hover);
+        }
+
+        /* Hero Section - Centered */
+        .hero {
+            height: 90vh;
+            min-height: 600px;
+            /* Using a high-end architectural/water abstraction stock photo */
+            background: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.85)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1600&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-text {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #CCCCCC;
+            margin-bottom: 30px;
+            max-width: 550px;
+        }
+
+        /* About / Philosophy Section - Centered */
+        .philosophy {
+            padding: 120px 0;
+            background-color: var(--white);
+            text-align: center;
+        }
+
+        .philosophy h2 {
+            font-size: 2.8rem;
+            color: var(--text-main);
+            margin-bottom: 25px;
+        }
+
+        .philosophy p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .divider {
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-gold);
+            margin: 40px auto;
+        }
+
+        /* Elegant Services Grid - Centered items */
+        .services {
+            padding: 100px 0;
+            background-color: var(--bg-color);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 50px 40px;
+            text-align: center;
+            border: 1px solid #EEEEEE;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            border-color: var(--accent-gold);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin: 0 auto;
+        }
+
+        /* Minimalist Testimonial - Centered */
+        .testimonial {
+            background-color: var(--dark-surface);
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .quote {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 1.4;
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            color: #E0E0E0;
+        }
+
+        .author {
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+        }
+
+        /* Footer - Centered */
+        footer {
+            background-color: var(--white);
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid #EEEEEE;
+        }
+
+        footer .logo {
+            color: var(--text-main);
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin: 5px 0;
+        }
+
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .agency-bar {
+                line-height: 1.8;
+                padding: 10px;
+                font-size: 0.75rem;
+            }
+            
+            .agency-bar a {
+                display: block;
+                margin-left: 0;
+                margin-top: 5px;
+            }
+
+            .nav-content {
+                padding: 20px;
+            }
+
+            .logo {
+                font-size: 1.6rem;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                margin-bottom: 15px;
+            }
+
+            .hero p {
+                font-size: 1rem;
+                margin-bottom: 20px;
+            }
+
+            .philosophy, .services, .testimonial {
+                padding: 60px 0; 
+            }
+
+            .philosophy h2 {
+                font-size: 2rem;
+            }
+
+            .service-card {
+                padding: 40px 20px;
+            }
+
+            .quote {
+                font-size: 1.4rem; 
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="agency-bar">
+        Designed by ABC Web Designs <a href="http://abcwebdesigns.org">⟵ Return to Agency Home</a>
+    </div>
+
+    <header>
+        <div class="nav-content">
+            <div class="logo">Bee Line</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>The Geometry of Flow.</h1>
+                <p>Precision drain clearing and sophisticated sewer maintenance for Des Moines' most discerning properties.</p>
+                <a href="tel:+15152254843" class="contact-btn">Request a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy">
+        <div class="container">
+            <h2>Uncompromising Flow. Flawless Execution.</h2>
+            <div class="divider"></div>
+            <p>At Bee Line Sewer Cleaning, we believe the hidden infrastructure of your property deserves the highest standard of care. We provide a meticulous, white-glove approach to sewer and drain maintenance, ensuring your home's vital systems operate with perfect, uninterrupted precision.</p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">✦</div>
+                    <h3>Diagnostic Profiling</h3>
+                    <p>Advanced, high-definition camera inspection to accurately map and identify deep structural blockages before they escalate.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✦</div>
+                    <h3>Precision Rooter</h3>
+                    <p>Targeted, methodical clearing of roots, scale, and debris designed to safely restore optimal flow to older or delicate systems.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✦</div>
+                    <h3>Preventative Architecture</h3>
+                    <p>Bespoke maintenance schedules tailored to protect your property's underground infrastructure and prevent emergency disruptions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonial">
+        <div class="container">
+            <div class="quote">
+                "Incredible attention to detail and immaculate service. They resolved a complex issue with minimal disruption to our home. The gold standard for drain care."
+            </div>
+            <div class="author">— Verified Client Review</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="logo">Bee Line</div>
+            <p>Des Moines, IA 50311</p>
+            <p>Direct: (515) 225-4843</p>
+            <p style="margin-top: 30px; font-size: 0.8rem;">&copy; 2026 Bee Line Sewer Cleaning. Concept by ABC Web Designs.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
